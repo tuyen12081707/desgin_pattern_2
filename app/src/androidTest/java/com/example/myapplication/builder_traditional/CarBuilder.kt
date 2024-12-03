@@ -1,8 +1,10 @@
 package com.example.myapplication.builder_traditional
 
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.myapplication.CarKotlin
 import org.junit.Assert
 import org.junit.Test
+import org.junit.runner.RunWith
 
 class CarBuilder :IBuilderCar {
     private var brand: String? = null
@@ -39,7 +41,7 @@ class CarBuilder :IBuilderCar {
         return Car(brand, color, model, engine, transmission)
     }
 }
-
+@RunWith(AndroidJUnit4::class)
 class CarTest {
     @Test
     fun builderTest2() {
